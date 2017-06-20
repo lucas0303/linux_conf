@@ -1,0 +1,37 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+#TOMCAT
+CATALINA_BASE=/opt/tomcat
+CATALINA_HOME=/opt/tomcat
+CATALINA_TMPDIR=/opt/tomcat/temp
+
+#JDK
+JAVA_HOME=/usr/local/jdk
+JRE_HOME=$JAVA_HOME/jre
+CLASSPATH=$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:/opt/tomcat/bin/bootstrap.jar:$CATALINA_HOME/bin/tomcat-juli.jar:$CATALINA_HOME/lib/servlet-api.jar
+NGINX=/usr/local/nginx
+
+#ANT
+ANT_HOME=/usr/local/share/ant
+
+if [ -z $OLDPATH ];then
+    OLDPATH=$PATH
+    PATH=/usr/local/python34/bin:$ANT_HOME/bin:$CATALINA_HOME/bin:$JAVA_HOME/bin:/opt/QtSDK/Desktop/Qt/474/gcc/bin/:/usr/local/bin/yh:$NGINX/sbin:$PATH
+else
+    PATH=/usr/local/python34/bin:$ANT_HOME/bin:$CATALINA_HOME/bin:$JAVA_HOME/bin:/opt/QtSDK/Desktop/Qt/474/gcc/bin/:/usr/local/bin/yh:$OLDPATH
+fi
+
+JK=$DP/script/bin
+ks230=$HOME/work/code/ks230
+ks330=$HOME/work/code/ks330
+
+export CATALINA_HOME CATALINA_TMPDIR CATALINA_BASE JAVA_HOME JRE_HOME CLASSPATH ANT_HOME OLDPATH PATH JK
+
+#ulimit -HSn 65536

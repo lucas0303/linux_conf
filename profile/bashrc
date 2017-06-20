@@ -1,0 +1,44 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# User specific aliases and functions
+
+alias rm='rm -iv'
+alias cp='cp -iv'
+alias mv='mv -iv'
+
+set -o vi
+
+if grep 'B940' /proc/cpuinfo >/dev/null 2>&1;then
+    alias mplayer='mplayer -vo x11'
+fi
+
+DP=/mnt/f/Dropbox
+SVN_EDITOR=vim
+export DP SVN_EDITOR
+
+#指令为红色字体
+#export PS1="\033[0;31m[\$?][\u@\h \W]\033[0;39m"
+export PS1="[\$?][\u@\h \W]"
+
+export LD_LIBRARY_PATH=.
+export GOAGENT=$DP/goagent
+
+export MZ=$DP/manzh
+
+source $HOME/.git-completion.bash
+source $HOME/.my-completion.sh
+
+#for pafront
+export WORKDIR=$HOME/src/pafront
+export LOGPATH=$WORKDIR/log
+
+#export GTK_IM_MODULE=ibus
+#export XMODIFIERS=@im=ibus
+#export QT_IM_MODULE=ibus
+
+export EDITOR=vim

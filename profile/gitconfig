@@ -1,0 +1,19 @@
+[user]
+	name = yangh
+	email = yefenglulu@gmail.com
+[core]
+	editor = vim
+[alisa]
+	co = checkout
+	ci = commit
+	br = branch
+	st = status
+[color]
+	ui = true
+[merge]
+    tool = extMerge
+[mergetool "extMerge"]
+    cmd = extMerge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+    trustExitCode = false
+[diff]
+    external = extDiff

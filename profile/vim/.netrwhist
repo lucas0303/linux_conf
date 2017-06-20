@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/yangh/ldd'
+let g:netrw_dirhist_2='/home/yangh'
+let g:netrw_dirhist_3='/home/yangh/workspace/demo/build'
+let g:netrw_dirhist_4='/home/yangh/work/epoll/lfepoll'
+let g:netrw_dirhist_5='/home/yangh/work/captcha/Tencent_CSEC_JAVA_SDK_v1.1/html'
+let g:netrw_dirhist_6='/mnt/f'

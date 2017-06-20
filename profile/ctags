@@ -1,0 +1,13 @@
+--langdef=doc
+--langmap=doc:.doc
+--regex-doc=/^Chapter[0-9]*\.[ \t]*([a-zA-Z0-9_]+)/ /e,Chapter/
+
+--langdef=man
+--langmap=man:.man
+--regex-man=/(^[A-Z]+[ \t:]*$)/\1/e,Chapter/
+--regex-man=/(^[0123456789]+[0]*\. .*$)/\1/e,Chapter/
+--regex-man=/(^[a-zA-Z]+$)/\1/m,Option/
+--regex-man=/^[ \t]+([-]+[a-zA-Z]+)[,;\t ]*/\1/m,Option/
+
+#该文件用于taglist定义tag标签之用
+#不对文本加亮
